@@ -87,14 +87,14 @@
 
                         <div class="form-group">
                             <label for="user-type">{{ __('User Type') }} <span class="text-red">*</span></label>
-                            <select required id="user-type" type="select" class="form-control" name="user_type"
-                                required>
-                                <option value="admin">Admin</option>
-                                <option value="doctor">Doctor</option>
-                                <option value="pharmacist">Pharmacist</option>
-                                <option value="doctor">Laboratorian</option>
-                                <option value="pharmacist">Receptionist</option>
-                            </select>
+                            <select required id="user-type" class="form-control" name="user_type">
+    <option value="admin">Admin</option>
+    <option value="doctor">Doctor</option>
+    <option value="pharmacist">Pharmacist</option>
+    <option value="laboratorian">Laboratorian</option>
+    <option value="receptionist">Receptionist</option>
+</select>
+
                         </div>
 
                         <!-- /.box-body -->
