@@ -1,11 +1,11 @@
-FROM richarvey/nginx-php-fpm:2.1.2
+FROM webdevops/php-nginx:7.4
 
-ENV WEBROOT=/var/www/html/public
-ENV PHP_ERRORS_STDERR=1
-ENV RUN_SCRIPTS=1
-ENV REAL_IP_HEADER=1
+ENV WEB_DOCUMENT_ROOT=/app/public
+ENV PHP_DISPLAY_ERRORS=0
+ENV PHP_MEMORY_LIMIT=512M
 
-COPY . /var/www/html
+WORKDIR /app
+COPY . /app
 
 RUN composer install --no-dev --optimize-autoloader
 
